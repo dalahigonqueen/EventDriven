@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Uniform Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="uniform-details">
+
+        <!-- PRODUCT IMAGE -->
+        <div class="uniform-image">
+            <img src="img/Uniform.png" alt="School Uniform">
+        </div>
+
+
+        <!-- PRODUCT INFORMATION -->
+        <div class="uniform-info">
+
+            <h1>School Uniform</h1>
+
+            <!-- PRICE -->
+            <h2 id="uniformPrice">₱850.00</h2>
+
+
+            <!-- UNIFORM SELECTION -->
+            <div class="uniform-option">
+
+                <label>Uniform:</label>
+
+                <select id="uniformType" onchange="updatePrice()">
+
+                    <option value="850">
+                        Both Upper & Lower - ₱850
+                    </option>
+
+                    <option value="400">
+                        Upper Only - ₱400
+                    </option>
+
+                    <option value="350">
+                        Lower Only - ₱350
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- MEN / WOMEN -->
+            <div class="uniform-option">
+
+                <label>For:</label>
+
+                <select>
+
+                    <option>Men</option>
+                    <option>Women</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- SIZE -->
+            <div class="uniform-option">
+
+                <label>Size:</label>
+
+                <select>
+
+                    <option>XL</option>
+                    <option>L</option>
+                    <option>M</option>
+                    <option>S</option>
+                    <option>XS</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- QUANTITY -->
+            <div class="uniform-option">
+
+                <label>Quantity:</label>
+
+                <select id="quantity" onchange="updatePrice()">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+
+            </div>
+
+
+            <!-- BUY BUTTON -->
+            <button class="buy-button">
+                Buy Now
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+    function updatePrice() {
+
+        let uniformPrice =
+            Number(document.getElementById("uniformType").value);
+
+        let quantity =
+            Number(document.getElementById("quantity").value);
+
+        let totalPrice = uniformPrice * quantity;
+
+        document.getElementById("uniformPrice").textContent =
+            "₱" + totalPrice.toFixed(2);
+
+    }
+
+</script>
+
+</body>
+
+</html>
