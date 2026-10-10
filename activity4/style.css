@@ -308,3 +308,241 @@ td a {
 .buy-button:hover {
     background-color: #003B73;
 }
+
+/* =========================
+   PE UNIFORM DETAILS
+   ========================= */
+
+.pe-details {
+    width: 90%;
+    height: 360px;
+    margin: 15px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    box-sizing: border-box;
+}
+
+
+/* PE IMAGE */
+
+.pe-image {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pe-image img {
+    width: 500px;
+    height: 500px;
+    object-fit: contain;
+}
+
+
+/* PE INFORMATION */
+
+.pe-info {
+    width: 350px;
+}
+
+.pe-info h1 {
+    color: #003B73;
+    font-size: 30px;
+    margin: 0 0 5px 0;
+}
+
+.pe-info h2 {
+    color: #0066A1;
+    font-size: 25px;
+    margin: 0 0 15px 0;
+}
+
+
+/* OPTIONS */
+
+.pe-option {
+    margin-bottom: 10px;
+}
+
+.pe-option label {
+    display: inline-block;
+    width: 90px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.pe-option select {
+    width: 220px;
+    padding: 6px;
+    font-size: 15px;
+    border: 2px solid #003B73;
+}
+
+
+/* BUY BUTTON */
+
+.pe-buy-button {
+    margin-top: 8px;
+    background-color: #0066A1;
+    color: #ffffff;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.pe-buy-button:hover {
+    background-color: #003B73;
+}
+
+
+/* ABOUT PAGE */
+
+.about-page {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000000;
+}
+
+/* ABOUT US */
+
+.about-header {
+    text-align: center;
+    padding: 15px 25px;
+    margin-bottom: 20px;
+}
+
+.about-header h1 {
+    color: #003B73;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.about-header p {
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+/* OUR MISSION */
+
+.about-mission {
+    background-color: #eaf4fc;
+    border-left: 5px solid #0066A1;
+    padding: 20px 25px;
+    margin-bottom: 25px;
+}
+
+.about-mission h2,
+.about-contact h2,
+.about-developers > h2 {
+    color: #003B73;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.about-mission p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+/* CONTACT US */
+
+.about-contact {
+    padding: 10px 20px;
+    margin-bottom: 30px;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 25px;
+}
+
+.contact-info p {
+    background-color: #f4f8fc;
+    padding: 12px;
+    margin: 0;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+}
+
+/* ABOUT THE DEVELOPERS */
+
+.about-developers {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.about-developers > h2 {
+    margin-bottom: 25px;
+}
+
+.developer-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+}
+
+.developer-card {
+    width: 42%;
+    padding: 20px;
+    border: 2px solid #bbd8f0;
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+
+.developer-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #bbd8f0;
+}
+
+.developer-card h3 {
+    color: #003B73;
+    font-size: 18px;
+    margin: 15px 0 10px;
+}
+
+.developer-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+/* SMALLER SCREENS */
+
+@media screen and (max-width: 600px) {
+    .about-page {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+
+    .developer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .developer-card {
+        width: 100%;
+    }
+}

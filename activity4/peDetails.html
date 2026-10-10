@@ -1,1 +1,119 @@
-<h1>PE Details</h1>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PE Uniform Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="pe-details">
+
+        <!-- PRODUCT IMAGE -->
+        <div class="pe-image">
+            <img src="img/Pe.png" alt="PE Uniform">
+        </div>
+
+
+        <!-- PRODUCT INFORMATION -->
+        <div class="pe-info">
+
+            <h1>PE Uniform</h1>
+
+            <!-- PRICE -->
+            <h2 id="pePrice">₱850.00</h2>
+
+
+            <!-- UPPER / LOWER / BOTH -->
+            <div class="pe-option">
+
+                <label>Uniform:</label>
+
+                <select id="peType" onchange="updatePEPrice()">
+
+                    <option value="850">
+                        Both Upper & Lower - ₱850
+                    </option>
+
+                    <option value="400">
+                        Upper Only - ₱400
+                    </option>
+
+                    <option value="350">
+                        Lower Only - ₱350
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- SIZE -->
+            <div class="pe-option">
+
+                <label>Size:</label>
+
+                <select>
+
+                    <option>XL</option>
+                    <option>L</option>
+                    <option>M</option>
+                    <option>S</option>
+                    <option>XS</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- QUANTITY -->
+            <div class="pe-option">
+
+                <label>Quantity:</label>
+
+                <select id="peQuantity" onchange="updatePEPrice()">
+
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- BUY BUTTON -->
+            <button class="pe-buy-button">
+                Buy Now
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        function updatePEPrice() {
+
+            let peTypePrice =
+                Number(document.getElementById("peType").value);
+
+            let quantity =
+                Number(document.getElementById("peQuantity").value);
+
+            let totalPrice = peTypePrice * quantity;
+
+            document.getElementById("pePrice").textContent =
+                "₱" + totalPrice.toFixed(2);
+
+        }
+
+    </script>
+
+</body>
+
+</html>
