@@ -1,0 +1,33 @@
+body {
+            font-family: 'Times New Roman', sans-serif;
+            background-color: #f2f2f2;
+            margin: 20px;
+        }
+        .row {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .left, .center, .right {
+            flex: 1;
+            min-width: 260px;
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+            border-radius: 6px;
+            padding: 15px;
+        }
+        h2 {
+            margin-top: 0;
+            color: #eb6dbd;
+        }
+        td {
+            padding: 5px;
+        }
+        button {
+            padding: 6px 14px;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+        p {
+            line-height: 1.6;
+        }

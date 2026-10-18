@@ -218,6 +218,31 @@ td a {
     margin: 0;
 }
 
+
+/* PRICE AND ADD TO CART */
+
+.product-price {
+    display: inline-block;
+    border: none;
+    padding: 3px 0;
+    margin: 3px 10px 3px 3px;
+}
+
+.product-bottom button {
+    border: 1px solid #003B73;
+    padding: 3px 8px;
+    margin: 3px 3px 3px 10px;
+    background-color: #ffffff;
+    color: #003B73;
+    cursor: pointer;
+}
+
+.product-bottom button:hover {
+    background-color: #0066A1;
+    color: #ffffff;
+}
+
+
 /* =========================
    UNIFORM DETAILS
    ========================= */
@@ -404,145 +429,181 @@ td a {
 /* ABOUT PAGE */
 
 .about-page {
-    width: 90%;
-    margin: 20px auto;
-    padding: 20px;
-    box-sizing: border-box;
+    width: 92%;
+    margin: 25px auto;
     font-family: Arial, Helvetica, sans-serif;
     color: #000000;
+    box-sizing: border-box;
 }
 
-/* ABOUT US */
-
-.about-header {
-    text-align: center;
-    padding: 15px 25px;
-    margin-bottom: 20px;
-}
-
-.about-header h1 {
+.about-page h1,
+.about-page h2 {
     color: #003B73;
-    font-size: 32px;
-    margin-bottom: 15px;
 }
 
-.about-header p {
-    font-size: 16px;
-    line-height: 1.7;
-    max-width: 750px;
-    margin: 0 auto;
+/* OUR STORY */
+
+.about-story {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    padding: 30px;
+    margin-bottom: 35px;
+    border: 2px solid #bbd8f0;
+    box-sizing: border-box;
 }
 
-/* OUR MISSION */
-
-.about-mission {
-    background-color: #eaf4fc;
-    border-left: 5px solid #0066A1;
-    padding: 20px 25px;
-    margin-bottom: 25px;
+.story-description {
+    width: 48%;
 }
 
-.about-mission h2,
-.about-contact h2,
-.about-developers > h2 {
-    color: #003B73;
+.story-description h1 {
+    font-size: 28px;
     margin-top: 0;
-    margin-bottom: 15px;
-    font-size: 24px;
 }
 
-.about-mission p {
+.story-description p {
     font-size: 16px;
-    line-height: 1.7;
-    margin-bottom: 0;
+    line-height: 1.8;
+    text-align: justify;
 }
 
-/* CONTACT US */
+.about-developers {
+    width: 48%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.developer {
+    width: 46%;
+    text-align: center;
+    border: 2px solid #bbd8f0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.developer img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+}
+
+.developer h3 {
+    font-size: 14px;
+    color: #003B73;
+    margin-bottom: 5px;
+}
+
+/* MAP AND CONTACT DETAILS */
 
 .about-contact {
-    padding: 10px 20px;
-    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 25px;
+    padding: 25px;
+    border: 2px solid #bbd8f0;
+    box-sizing: border-box;
 }
 
-.contact-info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px 25px;
+.about-map,
+.about-details {
+    width: 50%;
+    min-width: 0;
 }
 
-.contact-info p {
+.about-map h2,
+.about-details h2 {
+    font-size: 23px;
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+.about-map iframe {
+    display: block;
+    width: 100%;
+    height: 270px;
+    border: 2px solid #bbd8f0;
+    box-sizing: border-box;
+}
+
+.about-map p {
+    font-size: 13px;
+    color: #444444;
+}
+
+.about-map a {
+    display: block;
+}
+
+/* CONTACT INFORMATION */
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
     background-color: #f4f8fc;
-    padding: 12px;
-    margin: 0;
-    font-size: 15px;
+    border-left: 4px solid #0066A1;
     overflow-wrap: anywhere;
 }
 
-/* ABOUT THE DEVELOPERS */
-
-.about-developers {
-    text-align: center;
-    padding-top: 15px;
-}
-
-.about-developers > h2 {
-    margin-bottom: 25px;
-}
-
-.developer-container {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    gap: 25px;
-}
-
-.developer-card {
-    width: 42%;
-    padding: 20px;
-    border: 2px solid #bbd8f0;
-    background-color: #ffffff;
-    box-sizing: border-box;
-}
-
-.developer-card img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 3px solid #bbd8f0;
-}
-
-.developer-card h3 {
+.detail-item strong {
     color: #003B73;
-    font-size: 18px;
-    margin: 15px 0 10px;
-}
-
-.developer-card p {
     font-size: 14px;
-    line-height: 1.6;
-    text-align: left;
-    margin-bottom: 0;
 }
 
-/* SMALLER SCREENS */
+.detail-item a,
+.detail-item p {
+    font-size: 14px;
+    margin: 0;
+}
 
-@media screen and (max-width: 600px) {
+.detail-item a {
+    color: #0066A1;
+    text-decoration: none;
+}
+
+.detail-item a:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVE LAYOUT */
+
+@media screen and (max-width: 650px) {
+
     .about-page {
-        width: 100%;
-        padding: 12px;
+        width: 96%;
+        margin: 15px auto;
     }
 
-    .contact-info {
-        grid-template-columns: 1fr;
-    }
-
-    .developer-container {
+    .about-story,
+    .about-contact {
         flex-direction: column;
-        align-items: center;
+        padding: 18px;
     }
 
-    .developer-card {
+    .story-description,
+    .about-developers,
+    .about-map,
+    .about-details {
         width: 100%;
+    }
+
+    .about-developers {
+        gap: 10px;
+    }
+
+    .developer {
+        width: 50%;
+    }
+
+    .developer img {
+        height: 120px;
     }
 }

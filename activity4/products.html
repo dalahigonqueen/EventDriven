@@ -1,110 +1,134 @@
-<!DOCTYPE html> 
+
+<!DOCTYPE html>
 <html>
 <head>
     <title>PRODUCT</title>
     <link rel="stylesheet" href="style.css">
 </head>
-    
+
 <body>
 
-    <table>
+    <table class="products-table">
 
-        <!-- FIRST ROW - IMAGES -->
-        <tr height="200px">
+        <!-- FIRST ROW - PRODUCTS -->
+        <tr>
 
             <td>
-                <a href="uniformDetails.html" target="main">
+                <a href="uniformDetails.html" target="main" class="product-image">
                     <img src="img/Uniform.png" alt="Uniform">
                 </a>
+
+                <div class="product-info">
+                    <a href="uniformDetails.html" target="main" class="product-name">
+                        Uniform
+                    </a>
+
+                    <div class="product-bottom">
+                        <span class="product-price">₱1,200</span>
+                        <button onclick="addToCart('Uniform')">Add to Cart</button>
+                    </div>
+                </div>
             </td>
 
             <td>
-                <a href="peDetails.html" target="main">
+                <a href="peDetails.html" target="main" class="product-image">
                     <img src="img/Pe.png" alt="PE Uniform">
                 </a>
+
+                <div class="product-info">
+                    <a href="peDetails.html" target="main" class="product-name">
+                        PE Uniform
+                    </a>
+
+                    <div class="product-bottom">
+                        <span class="product-price">₱750</span>
+                        <button onclick="addToCart('PE Uniform')">Add to Cart</button>
+                    </div>
+                </div>
             </td>
 
             <td>
-                <a href="nstpDetails.html" target="main">
+                <a href="nstpDetails.html" target="main" class="product-image">
                     <img src="img/NSTP.png" alt="NSTP Polo Shirt">
                 </a>
+
+                <div class="product-info">
+                    <a href="nstpDetails.html" target="main" class="product-name">
+                        NSTP Polo Shirt
+                    </a>
+
+                    <div class="product-bottom">
+                        <span class="product-price">₱750</span>
+                        <button onclick="addToCart('NSTP Polo Shirt')">Add to Cart</button>
+                    </div>
+                </div>
             </td>
 
         </tr>
 
-
-        <!-- FIRST ROW - NAMES -->
-        <tr height="50px">
-
-            <td>
-                <a href="uniformDetails.html" target="main">
-                    Uniform
-                </a>
-            </td>
+        <!-- SECOND ROW - PRODUCTS -->
+        <tr>
 
             <td>
-                <a href="peDetails.html" target="main">
-                    PE Uniform
-                </a>
-            </td>
-
-            <td>
-                <a href="nstpDetails.html" target="main">
-                    NSTP Polo Shirt
-                </a>
-            </td>
-
-        </tr>
-
-
-        <!-- SECOND ROW - IMAGES -->
-        <tr height="200px">
-
-            <td>
-                <a href="logoDetails.html" target="main">
+                <a href="logoDetails.html" target="main" class="product-image">
                     <img src="img/Logos (1).png" alt="Logo">
                 </a>
+
+                <div class="product-info">
+                    <a href="logoDetails.html" target="main" class="product-name">
+                        Logo
+                    </a>
+
+                    <div class="product-bottom">
+                        <span class="product-price">₱100</span>
+                        <button onclick="addToCart('Logo')">Add to Cart</button>
+                    </div>
+                </div>
             </td>
 
             <td>
-                <a href="typebDetails.html" target="main">
+                <a href="typebDetails.html" target="main" class="product-image">
                     <img src="img/Type B.png" alt="Type B Uniform">
                 </a>
+
+                <div class="product-info">
+                    <a href="typebDetails.html" target="main" class="product-name">
+                        Type B Uniform
+                    </a>
+
+                    <div class="product-bottom">
+                        <span class="product-price">₱550</span>
+                        <button onclick="addToCart('Type B Uniform')">Add to Cart</button>
+                    </div>
+                </div>
             </td>
 
             <td>
-                <a href="varsityDetails.html" target="main">
+                <a href="varsityDetails.html" target="main" class="product-image">
                     <img src="img/Varsity.png" alt="Varsity Jacket">
                 </a>
-            </td>
 
-        </tr>
+                <div class="product-info">
+                    <a href="varsityDetails.html" target="main" class="product-name">
+                        Varsity Jacket
+                    </a>
 
-
-        <!-- SECOND ROW - NAMES -->
-        <tr height="50px">
-
-            <td>
-                <a href="logoDetails.html" target="main">
-                    Logo
-                </a>
-            </td>
-
-            <td>
-                <a href="typebDetails.html" target="main">
-                    Type B Uniform
-                </a>
-            </td>
-
-            <td>
-                <a href="varsityDetails.html" target="main">
-                    Varsity Jacket
-                </a>
+                    <div class="product-bottom">
+                        <span class="product-price">₱1,200</span>
+                        <button onclick="addToCart('Varsity Jacket')">Add to Cart</button>
+                    </div>
+                </div>
             </td>
 
         </tr>
 
     </table>
+
+    <script>
+        function addToCart(productName) {
+            alert(productName + " added to cart!");
+        }
+    </script>
 
 </body>
 </html>
