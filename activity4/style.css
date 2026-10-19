@@ -923,3 +923,57 @@ td a {
     }
 }
 
+
+
+/* PRODUCT LAYOUT FOR PHONES ONLY */
+@media screen and (max-width: 650px) {
+
+    .products-table {
+        width: 100%;
+        height: auto;
+        table-layout: fixed;
+    }
+
+    .products-table tr {
+        display: contents;
+    }
+
+    .products-table tbody {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .products-table td {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        overflow-wrap: anywhere;
+        font-size: 13px;
+    }
+
+    .products-table td img {
+        width: 100%;
+        height: 100px;
+        object-fit: contain;
+    }
+
+    .products-table .product-bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .products-table .product-price {
+        font-size: 12px;
+    }
+
+    .products-table .product-bottom button {
+        max-width: 100%;
+        padding: 5px;
+        font-size: 11px;
+        margin: 0;
+    }
+}
+
+
