@@ -694,19 +694,33 @@ td a {
         height: 100%;
     }
 
-    /* WELCOME MESSAGE */
+    
+    /* WELCOME MESSAGE - PHONE ONLY */
     .welcome {
-        padding: 70px 12px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px 12px;
+        box-sizing: border-box;
     }
 
     .welcome h1 {
         font-size: 28px;
+        text-align: center;
+        margin: 0 0 10px 0;
+        width: 100%;
     }
 
     .welcome p {
         font-size: 16px;
         line-height: 1.5;
+        text-align: center;
+        margin: 0;
+        width: 100%;
     }
+
 
     /* FOOTER */
     .footer {
